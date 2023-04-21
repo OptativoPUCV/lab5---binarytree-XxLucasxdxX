@@ -76,15 +76,15 @@ Pair * searchTreeMap(TreeMap * tree, void* key) {
   TreeNode * actual= tree->root;
   while(actual!=NULL)
     {
-      int comparar=tree->lower_than(key,actual->pair->key);
+      
       if(tree->lower_than(actual->pair->key, key)==0 && tree->lower_than(key, actual->pair->key)==0){
         tree->current=actual;
         return actual->pair;
       } else if (tree->lower_than(actual->pair->key, key)==0 && tree->lower_than(key, actual->pair->key)==1){
-        actual=actual->right;
+        actual=actual->left;
       }
       if((tree->lower_than(actual->pair->key, key)==1 && tree->lower_than(key, actual->pair->key)==0)){
-        actual=actual->left;
+        actual=actual->right;
       }
     }
   return NULL;

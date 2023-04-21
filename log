@@ -65,3 +65,9 @@ treemap.c:79:11: error: unused variable ‘comparar’ [-Werror=unused-variable]
 cc1: all warnings being treated as errors
 Compilation failed
 624a973
+Fri 21 Apr 2023 12:53:07 AM UTC: 
+ treemap.c | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+ tests:  11|6
+total_score: 15/70
+97add28
