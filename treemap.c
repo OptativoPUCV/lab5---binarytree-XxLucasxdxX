@@ -99,12 +99,13 @@ void removeNode(TreeMap * tree, TreeNode* node) {
       padre->left=hijo;
     }
     hijo->parent=padre;
-  } 
+  } else{
   if(node->left!=NULL || node->right!=NULL){
     TreeNode * minimo=minimum(node->right);
     node->pair->key=minimo->pair->key;
     node->pair->value=minimo->pair->value;
     removeNode(tree,minimo);
+   }
   }
 }
 
