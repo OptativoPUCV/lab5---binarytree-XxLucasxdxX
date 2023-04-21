@@ -71,7 +71,6 @@ void insertTreeMap(TreeMap * tree, void* key, void * value) {
 }
 
 TreeNode * minimum(TreeNode * x){
-
   while(x->left!=NULL){
     x=x->left;
   }
@@ -105,7 +104,7 @@ void removeNode(TreeMap * tree, TreeNode* node) {
     TreeNode * minimo=minimum(node->right);
     node->pair->key=minimo->pair->key;
     node->pair->value=minimo->pair->value;
-    removeNode(tree,node);
+    removeNode(tree,minimo);
   }
 }
 
