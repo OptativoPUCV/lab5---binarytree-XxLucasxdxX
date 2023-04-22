@@ -140,7 +140,8 @@ Pair * searchTreeMap(TreeMap * tree, void* key) {
 }
 
 
-Pair * upperBound(TreeMap * tree, void* key) {
+Pair * upperBound(TreeMap * tree, void* key)
+{
   TreeNode *actual= tree->root;
   TreeNode *ub_node= NULL;
 
