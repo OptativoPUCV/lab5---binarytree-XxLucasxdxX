@@ -154,12 +154,11 @@ Pair * upperBound(TreeMap * tree, void* key)
     } else {
       actual=actual->right;
     }
-    if(ub_node!=NULL){
-      return ub_node->pair;
-    } else {
-      return NULL;
-    }
-      
+  }
+  if(ub_node!=NULL){
+    return ub_node->pair;
+  } else {
+    return NULL;
   }
 }
 
